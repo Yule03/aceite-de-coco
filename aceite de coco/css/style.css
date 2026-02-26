@@ -1,0 +1,256 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #e8f5e9, #ffffff);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2e7d32;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 40px;
+        }
+
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .box {
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .producto-img {
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .producto h3 {
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+
+        .producto p {
+            margin-bottom: 15px;
+        }
+
+        .producto a {
+            background: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* CHATBOT STYLES */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .chatbot-toggle {
+            background-color: #2e7d32;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-window {
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .message.bot {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+        .message.user {
+            background-color: #2e7d32;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+        .chatbot-input {
+            padding: 10px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 5px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .chat-wa-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            transition: background 0.3s;
+        }
+
+        .chat-wa-btn:hover {
+            background-color: #128c7e;
+        }
